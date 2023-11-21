@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Button, useMediaQuery } from '@chakra-ui/react';
 
 const ContadorResponsive = () => {
-    const [contador, setContador] = useState(0);
-    const [times, setTimes] = useState(0);
+    const [contador, setContador] = React.useState(0);
+    const [times, setTimes] = React.useState(0);
     const [isLargerThan768, isLargerThan1024] = useMediaQuery([
         "(min-width: 768px)",
         "(min-width: 1024px)",
@@ -27,11 +27,11 @@ const ContadorResponsive = () => {
 
     return (
         <Box textAlign="center" mt={8}>
-            <Button onClick={incrementarContador} disabled={contador >= 20} mr={2}>
+            <Button onClick={incrementarContador} disabled={contador >= 20} mr={isLargerThan768 ? 2 : 0}>
                 Sumar +
             </Button>
             <span>{contador}</span>
-            <Button onClick={decrementarContador} disabled={contador <= 0} ml={2}>
+            <Button onClick={decrementarContador} disabled={contador <= 0} ml={isLargerThan768 ? 2 : 0}>
                 Restar -
             </Button>
             <div>: {times}</div>
@@ -43,5 +43,3 @@ const ContadorResponsive = () => {
 };
 
 export default ContadorResponsive;
-
-
