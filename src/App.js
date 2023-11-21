@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <ContadorResponsive></ContadorResponsive>
+        <ContadorResponsive />
       </div>
     </div>
   );

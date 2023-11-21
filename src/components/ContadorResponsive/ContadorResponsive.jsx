@@ -1,6 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const app = document.querySelector('.app');
 const useState = React.useState
-
 
 function Contador() {
     let [value, setValue] = useState(0)
