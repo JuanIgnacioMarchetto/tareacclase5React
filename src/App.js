@@ -12,11 +12,11 @@ const theme = extendTheme({
       variants: {
         primary: {
           backgroundColor: 'primary',
-          color: 'white',
+          color: '#722856',
         },
         secondary: {
           backgroundColor: 'secondary',
-          color: 'white',
+          color: 'rgb(112, 9, 9)',
         },
       },
     },

@@ -12,14 +12,14 @@ const ContadorResponsive = () => {
     const incrementarContador = () => {
         if (contador < 20) {
             setContador(contador + 1);
-            setTimes(times + 1);
+           ;
         }
     };
 
     const decrementarContador = () => {
         if (contador > 0) {
             setContador(contador - 1);
-            setTimes(times + 1);
+            ;
         }
     };
 
