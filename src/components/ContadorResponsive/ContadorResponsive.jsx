@@ -4,7 +4,10 @@ import { Box, Button, useMediaQuery } from '@chakra-ui/react';
 const ContadorResponsive = () => {
     const [contador, setContador] = useState(0);
     const [times, setTimes] = useState(0);
-    const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+    const [isLargerThan768, isLargerThan1024] = useMediaQuery([
+        "(min-width: 768px)",
+        "(min-width: 1024px)",
+    ]);
 
     const incrementarContador = () => {
         if (contador < 20) {
@@ -23,16 +26,22 @@ const ContadorResponsive = () => {
     const mostrarTextoTope = contador === 0 || contador === 20;
 
     return (
-        <React.Fragment>
-            <button onClick={incrementarContador} disabled={contador >= 20}>Sumar +</button>
+        <Box textAlign="center" mt={8}>
+            <Button onClick={incrementarContador} disabled={contador >= 20} mr={2}>
+                Sumar +
+            </Button>
             <span>{contador}</span>
-            <button onClick={decrementarContador} disabled={contador <= 0}>Restar -</button>
+            <Button onClick={decrementarContador} disabled={contador <= 0} ml={2}>
+                Restar -
+            </Button>
             <div>: {times}</div>
             {mostrarTextoTope && (
                 <p>{contador === 0 ? 'Tope mínimo!' : '¡Tope máximo!'}</p>
             )}
-        </React.Fragment>
+        </Box>
     );
 };
 
 export default ContadorResponsive;
+
+
