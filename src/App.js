@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import ContadorResponsive from './components/ContadorResponsive/ContadorResponsive.jsx'
 import './App.css';
 
 function App() {
