@@ -34,7 +34,7 @@ const ContadorResponsive = () => {
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            borderRadius="5%" 
+            borderRadius="10%" 
         >
             <Box mb={4}>
                 <Button
