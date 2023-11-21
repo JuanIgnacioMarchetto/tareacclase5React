@@ -15,3 +15,4 @@ function Contador() {
 }
 
 ReactDOM.render(<Contador />, app)
+export default ContadorResponsive;
