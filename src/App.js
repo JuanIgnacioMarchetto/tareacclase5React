@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChakraProvider, CSSReset, extendTheme } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react'; // Import Box from Chakra UI
 import ContadorResponsive from './components/ContadorResponsive/ContadorResponsive';
 
 const theme = extendTheme({
