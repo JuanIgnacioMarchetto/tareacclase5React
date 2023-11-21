@@ -7,7 +7,7 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        borderRadius: '14% 86% 17% 83% / 69% 35% 65% 31%', 
+        borderRadius: '54% 46% 58% 42% / 33% 49% 51% 67% ', 
         background: '#722856',
       },
       
