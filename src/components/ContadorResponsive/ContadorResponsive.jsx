@@ -23,7 +23,7 @@ const ContadorResponsive = () => {
     const mostrarTextoTope = contador === 0 || contador === 20;
 
     return (
-        <Box textAlign="center" mt={8} bg="#0ed1c7">
+        <Box textAlign="center" mt={8} bg="#0ed1c7"p={6} width="60%" height="300px" display="flex" alignItems="center" justifyContent="center"> 
             <Button
                 onClick={incrementarContador}
                 disabled={contador >= 20}
