@@ -24,12 +24,12 @@ const ContadorResponsive = () => {
 
     return (
         <React.Fragment>
-            <button onClick={incrementarContador} disabled={contador >= 20}>Incrementar +</button>
+            <button onClick={incrementarContador} disabled={contador >= 20}>Sumar +</button>
             <span>{contador}</span>
-            <button onClick={decrementarContador} disabled={contador <= 0}>Decrementar -</button>
+            <button onClick={decrementarContador} disabled={contador <= 0}>Restar -</button>
             <div>: {times}</div>
             {mostrarTextoTope && (
-                <p>{contador === 0 ? 'alcanzado el tope mínimo!' : '¡El contador ha alcanzado el tope máximo!'}</p>
+                <p>{contador === 0 ? 'Tope mínimo!' : '¡Tope máximo!'}</p>
             )}
         </React.Fragment>
     );
