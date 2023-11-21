@@ -11,26 +11,34 @@ const ContadorResponsive = () => {
     const incrementarContador = () => {
         if (contador < 20) {
             setContador(contador + 1);
-           ;
         }
     };
 
     const decrementarContador = () => {
         if (contador > 0) {
             setContador(contador - 1);
-            ;
         }
     };
 
     const mostrarTextoTope = contador === 0 || contador === 20;
 
     return (
-        <Box textAlign="center" mt={8}>
-            <Button onClick={incrementarContador} disabled={contador >= 20} mr={isLargerThan768 ? 2 : 0}>
+        <Box textAlign="center" mt={8} bg="#0ed1c7">
+            <Button
+                onClick={incrementarContador}
+                disabled={contador >= 20}
+                mr={isLargerThan768 ? 2 : 0}
+                bg="#722856"
+            >
                 Sumar +
             </Button>
             <span>{contador}</span>
-            <Button onClick={decrementarContador} disabled={contador <= 0} ml={isLargerThan768 ? 2 : 0}>
+            <Button
+                onClick={decrementarContador}
+                disabled={contador <= 0}
+                ml={isLargerThan768 ? 2 : 0}
+                bg="#722856"
+            >
                 Restar -
             </Button>
             <div></div>

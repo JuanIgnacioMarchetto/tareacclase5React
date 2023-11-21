@@ -8,6 +8,7 @@ const theme = extendTheme({
     Button: {
       baseStyle: {
         borderRadius: '14% 86% 17% 83% / 69% 35% 65% 31%', 
+        background: '#722856',
       },
       
     },
