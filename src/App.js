@@ -9,16 +9,7 @@ const theme = extendTheme({
       baseStyle: {
         borderRadius: '14% 86% 17% 83% / 69% 35% 65% 31%', 
       },
-      variants: {
-        primary: {
-          backgroundColor: 'primary',
-          color: '#722856',
-        },
-        secondary: {
-          backgroundColor: 'secondary',
-          color: 'rgb(112, 9, 9)',
-        },
-      },
+      
     },
   },
 });
