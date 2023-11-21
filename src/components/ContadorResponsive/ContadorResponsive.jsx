@@ -1,20 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
+import { Box, Button, useMediaQuery } from '@chakra-ui/react';
 
-const app = document.querySelector('.app');
-const useState = React.useState
+const ContadorResponsive = () => {
+    const [contador, setContador] = useState(0);
+    const [times, setTimes] = useState(0);
+    const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
-function Contador() {
-    let [value, setValue] = useState(0)
-    let [times, setTimes] = useState(0)
+    const incrementarContador = () => {
+        if (contador < 20) {
+            setContador(contador + 1);
+            setTimes(times + 1);
+        }
+    };
 
-    return <React.Fragment>
-        <button onClick={() => { setValue(value + 1); setTimes(times + 1) }}> incrementar + </button>
-        <span>{value}</span>
-        <button onClick={() => { setValue(value - 1); setTimes(times + 1) }} button> decrementar - </button>
-        <div>: {times}</div>
-    </React.Fragment>;
-}
+    const decrementarContador = () => {
+        if (contador > 0) {
+            setContador(contador - 1);
+            setTimes(times + 1);
+        }
+    };
 
-ReactDOM.render(<Contador />, app)
+    const mostrarTextoTope = contador === 0 || contador === 20;
+
+    return (
+        <React.Fragment>
+            <button onClick={incrementarContador} disabled={contador >= 20}>Incrementar +</button>
+            <span>{contador}</span>
+            <button onClick={decrementarContador} disabled={contador <= 0}>Decrementar -</button>
+            <div>: {times}</div>
+            {mostrarTextoTope && (
+                <p>{contador === 0 ? 'alcanzado el tope mínimo!' : '¡El contador ha alcanzado el tope máximo!'}</p>
+            )}
+        </React.Fragment>
+    );
+};
+
 export default ContadorResponsive;

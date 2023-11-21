@@ -1,15 +1,14 @@
 import React from 'react';
-import ContadorResponsive from './components/ContadorResponsive/ContadorResponsive.jsx'
-import './App.css';
+import Contador from './components/ContadorResponsive/ContadorResponsive.jsx';
 
 function App() {
-  return (
-    <div className="App">
-      <div>
-        <ContadorResponsive />
-      </div>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div>
+                <Contador />
+            </div>
+        </div>
+    );
 }
 
 export default App;
