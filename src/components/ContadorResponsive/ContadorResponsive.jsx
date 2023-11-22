@@ -34,10 +34,14 @@ const ContadorResponsive = () => {
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            borderRadius="10%" 
+            borderRadius="10%"
         >
             <Box mb={4}>
-                <Box p={1} background="#09524e" mb={2}>
+                <Box p={1} background="#09524e" style={{
+
+                    borderRadius: '74% 26% 73% 27% / 26% 49% 51% 74% ',
+
+                }} mb={2}>
                     {contador}
                 </Box>
                 <Button
@@ -49,7 +53,7 @@ const ContadorResponsive = () => {
                 >
                     Sumar +
                 </Button>
-                
+
                 <Button
                     onClick={decrementarContador}
                     disabled={contador <= 0}
@@ -66,7 +70,7 @@ const ContadorResponsive = () => {
                     padding: '2px',
                     borderRadius: '5px',
                     position: 'absolute',
-                    top: 0, 
+                    top: 0,
                     width: '100%',
                 }}>{contador === 0 ? 'Tope mínimo!' : '¡Tope máximo!'}</p>
             )}
